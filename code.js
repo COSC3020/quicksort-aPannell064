@@ -20,5 +20,3 @@ function quicksort(array) {
     }
     return array;
 }
-
-console.log(quicksort([]))
