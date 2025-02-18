@@ -1,7 +1,9 @@
 function quicksort(array) {
     var lo, p, hi;
     // Use a stack of low/high ordered pairs to make it behave recursively. 
-    var bounds = [[0, array.length-1]];
+    var bounds = [];
+    if(array.length) {bounds.unshift([0, array.length-1]);}
+
     while(bounds.length) {
         lo = bounds[0][0];
         hi = bounds.shift()[1];
@@ -18,3 +20,5 @@ function quicksort(array) {
     }
     return array;
 }
+
+console.log(quicksort([]))
